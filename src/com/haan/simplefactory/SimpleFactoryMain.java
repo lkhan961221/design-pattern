@@ -7,8 +7,9 @@ package com.haan.simplefactory;
  */
 public class SimpleFactoryMain {
     public static void main(String[] args) {
-        Product product = ProductFactory.getProduct("A");
-        assert product != null;
-        product.showName();
+        Operator operator = OperatorFactory.getOperator("+");
+        assert operator != null;
+        Double result = operator.operate(1.0, 4.0);
+        System.out.println(result);
     }
 }
